@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <VideoView
+        android:id="@+id/videoView"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/img_pause_play"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_pause" />
+
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_90sdp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:id="@+id/tv_left"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/seekbar"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:text="00:00"
+            android:textSize="@dimen/_10sdp" />
+
+        <TextView
+            android:id="@+id/tv_right"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/seekbar"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:gravity="end"
+            android:text="00:00"
+            android:textSize="@dimen/_10sdp" />
+
+        <com.innovattic.rangeseekbar.RangeSeekBar
+            app:rsb_touchRadius="44dp"
+            app:rsb_sidePadding="0dp"
+            app:rsb_minThumbDrawable="@drawable/line_horizontal"
+            app:rsb_maxThumbDrawable="@drawable/line_horizontal"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            app:rsb_trackThickness="44dp"
+            app:rsb_trackSelectedThickness="44dp"
+            app:rsb_trackColor="#ccffff"
+            app:rsb_trackSelectedColor="#ffffcc"
+            android:id="@+id/seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+             />
+
+<!--        <com.jaygoo.widget.RangeSeekBar-->
+<!--            android:id="@+id/seekbar"-->
+
+<!--            android:paddingTop="30dp"-->
+<!--            app:rsb_max="100"-->
+<!--            app:rsb_min="0"-->
+<!--            app:rsb_thumb_drawable="@drawable/ic_pause"-->
+<!--            app:rsb_progress_default_color="#ccffff"-->
+<!--            app:rsb_progress_color="#ffffcc"-->
+<!--            app:rsb_progress_radius="1px"-->
+<!--            app:rsb_progress_height="44dp"-->
+<!--            app:rsb_mode="range"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"/>-->
+
+<!--        <org.florescu.android.rangeseekbar.RangeSeekBar-->
+<!--            android:id="@+id/seekbar"-->
+
+<!--            rsb_indicator_text_color="#fff"-->
+<!--            rsb_progress_color="#83807d"-->
+<!--            rsb_progress_default_color="@color/colorPrimaryDark"-->
+<!--            rsb_tick_mark_text_color="@color/colorPrimaryDark"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:layout_marginLeft="17dp"-->
+<!--            android:layout_marginRight="17dp" />-->
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
